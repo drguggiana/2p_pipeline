@@ -26,9 +26,9 @@ full_paths = cellfun(@size,aux_folders,num2cell(ones(length(aux_folders),1).*2))
 aux_folders = aux_folders(full_paths==6);
 aux_folders = cat(1,aux_folders{:});
 %allocate memory to store the actual files
-aux_cell = cell(length(aux_folders),1);
+aux_cell = cell(size(aux_folders,1),1);
 %for all the remaining files
-for aux = 1:length(aux_folders)
+for aux = 1:size(aux_folders,1)
     
 %     %load the contained files in the cell
 %     aux_cell{aux,1} = fullfile(aux_folders{aux,:});
